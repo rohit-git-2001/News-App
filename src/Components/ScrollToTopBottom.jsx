@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export default function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
