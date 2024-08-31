@@ -48,12 +48,12 @@ export default function News() {
 
   return (
     <>
-      <div className="bg-blue-600  m-1 p-1 rounded-md ">
-        <nav className="flex w-full justify-around">
+      <div id="header" className="bg-blue-600  m-1 p-1 rounded-md ">
+        <nav id="nav" className="flex w-full justify-around">
           <div className="bg-white px-2 rounded-md font-bold">
             <p>Daily News Portal</p>
           </div>
-          <div className="w-[420px] flex justify-between">
+          <div id="searchLine" className="w-[420px] flex justify-between">
             <input
               className="w-[230px] rounded-md text-xs 
                         px-4 focus:outline-none"
@@ -69,7 +69,7 @@ export default function News() {
             </button>
             <div className="dropdown">
               <button
-                className="btn btn-secondary dropdown-toggle text-xs"
+                className="btn bg-white dropdown-toggle text-xs"
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -99,7 +99,7 @@ export default function News() {
         </nav>
       </div>
 
-      <div className="bg-white m-auto  mt-4 p-2 text-sm w-2/3 rounded-md ">
+      <div id="options" className="bg-white m-auto  mt-4 p-2 text-sm w-2/3 rounded-md ">
         <ul className="w-full flex justify-around">
           <button
             className="hover:bg-red-600 hover:text-white w-[100px] p-1 rounded-md"
@@ -149,6 +149,13 @@ export default function News() {
             value="movies"
           >
             Movies
+          </button>
+          <button
+            className="hover:bg-red-600 hover:text-white w-[100px] p-1 rounded-md"
+            onClick={searchNow}
+            value="space"
+          >
+            Space
           </button>
         </ul>
       </div>
