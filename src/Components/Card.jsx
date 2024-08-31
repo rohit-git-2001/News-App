@@ -1,6 +1,6 @@
 export default function Card({ news }) {
   return (
-    <div className="m-auto mt-4 w-4/5 flex flex-wrap">
+    <div className="m-auto mt-4 w-4/5 flex bg-red-600 flex-wrap">
       {news?.map((curItem, index) => {
         if (!curItem.urlToImage || !curItem.author) {
           return null;
