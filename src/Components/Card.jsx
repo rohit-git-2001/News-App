@@ -1,6 +1,6 @@
 export default function Card({ news }) {
   return (
-    <div className="m-auto mt-4 w-4/5 flex bg-red-600 flex-wrap">
+    <div className="m-auto w-4/5 flex flex-wrap justify-center align-middle">
       {news?.map((curItem, index) => {
         if (!curItem.urlToImage || !curItem.author) {
           return null;
@@ -8,7 +8,7 @@ export default function Card({ news }) {
           return (
             <div
               id="card"
-              className="w-[300px] m-5 bg-white p-2 rounded-md"
+              className="w-[280px] m-5  bg-white p-3 rounded-md"
               key={index}
             >
               <div>
