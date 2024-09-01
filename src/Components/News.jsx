@@ -11,7 +11,12 @@ export default function News() {
   const getData = async () => {
     try {
       const response = await axios.get(
-        `https://newsapi.org/v2/everything?q=${search}&language=${lang}&apiKey=c66887260083453088f62057966b20eb`
+        `https://newsapi.org/v2/everything?q=${search}&language=${lang}&apiKey=c66887260083453088f62057966b20eb`,
+        {
+          headers: {
+            Upgrade: "HTTP/2.0",
+          },
+        }
       );
       // console.log(response.data.articles)
       // const pureData = response;
@@ -37,7 +42,7 @@ export default function News() {
 
   useEffect(() => {
     getData();
-  }, [search, lang]);
+  });
 
   const changeSearch = (e) => {
     setQuery(e.target.value);
@@ -180,8 +185,6 @@ export default function News() {
     </>
   );
 }
-
-
 
 // import { useEffect, useState } from "react";
 // import axios from "axios";
