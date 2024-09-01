@@ -8,7 +8,7 @@ export default function Card({ news }) {
           return (
             <div
               id="card"
-              className="w-[380px] m-5  bg-white p-3 rounded-md"
+              className="w-[280px] m-5  bg-white p-3 rounded-md"
               key={index}
             >
               <div>
