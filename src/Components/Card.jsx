@@ -1,6 +1,6 @@
 export default function Card({ news }) {
   return (
-    <div id="cardHolder" className="m-auto w-4/5 flex flex-wrap justify-center align-middle">
+    <div id="cardHolder" className="m-auto w-4/5 flex flex-wrap justify-center items-center ">
       {news?.map((curItem, index) => {
         if (!curItem.urlToImage || !curItem.author) {
           return null;
@@ -23,7 +23,7 @@ export default function Card({ news }) {
                 >
                   {curItem.title}
                 </h2>
-                <p>{curItem.description}</p>
+                <p>{curItem.description.substring(0,100)}...</p>
                 <button
                   id="read"
                   target="_blank"

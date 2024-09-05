@@ -34,3 +34,6 @@ body {
     margin-bottom: 20px;
 }
 
+#cardHolder {
+    margin-top: 100px !important;
+}
